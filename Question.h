@@ -13,5 +13,6 @@ class Question{
         int BonneReponse;
     public :
 
+    Question();
     Question(string Q, string A, string B, string C, string D, int BonneReponse);
 };
