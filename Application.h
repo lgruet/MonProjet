@@ -20,6 +20,7 @@ class Application{
     
     //Incrémente le score
     void Increment_Score();
+    
     //Retourne le score
     int getScore();
 
@@ -29,5 +30,6 @@ class Application{
 
     void Init_Application();
     void Run_Application();
+
 
 };
