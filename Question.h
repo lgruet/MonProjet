@@ -1,29 +1,29 @@
-#include <string>  
-
+//#include <string>  //Inutile, existe déjà dans Arduino apparement
+#include <Arduino.h>
 using namespace std;
 
 
 class Question{
     private :
-        string Qst;
-        string ReponseA;
-        string ReponseB;
-        string ReponseC;
-        string ReponseD;
+        String Qst;
+        String ReponseA;
+        String ReponseB;
+        String ReponseC;
+        String ReponseD;
         int BonneReponse;
     public :
 
     Question();
-    Question(string Q, string A, string B, string C, string D, int BonneReponse);
+    Question(String Q, String A, String B, String C, String D, int BonneReponse);
     
     //Retourne chaques éléments privés d'une instance question
-    string getQst();
-    string getA();
-    string getB();
-    string getC();
-    string getD();
+    String getQst();
+    String getA();
+    String getB();
+    String getC();
+    String getD();
     int getBonneReponse();
 
     //Redéfinition de l'opérateur =
-    Question & operator = (const Question & autre);
+    Question& operator = (const Question & autre);
 };

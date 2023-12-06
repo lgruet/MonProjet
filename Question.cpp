@@ -4,7 +4,7 @@ Question::Question(){
   NULL;
 }
 
-Question::Question(string Q, string A, string B, string C, string D, int BonneReponse){
+Question::Question(String Q, String A, String B, String C, String D, int BonneReponse){
     this->Qst=Q;
     this->ReponseA=A;
     this->ReponseB=B;
@@ -13,23 +13,23 @@ Question::Question(string Q, string A, string B, string C, string D, int BonneRe
     this->BonneReponse=BonneReponse;
 }
 
-string Question::getQst(){
+String Question::getQst(){
   return this->Qst;
 }
 
-string Question::getA(){
+String Question::getA(){
   return this->ReponseA;
 }
 
-string Question::getB(){
+String Question::getB(){
   return this->ReponseB;
 }
 
-string Question::getC(){
+String Question::getC(){
   return this->ReponseC;
 }
 
-string Question::getD(){
+String Question::getD(){
   return this->ReponseD;
 }
 
@@ -38,10 +38,11 @@ int Question::getBonneReponse(){
 }
 
 Question& Question::operator = (const Question & autre){
-    Qst=autre.Qst;
-    ReponseA=autre.ReponseA;
-    ReponseB=autre.ReponseB;
-    ReponseC=autre.ReponseC;
-    ReponseD=autre.ReponseD;
-    BonneReponse=autre.BonneReponse;
+  Qst=autre.Qst;
+  ReponseA=autre.ReponseA;
+  ReponseB=autre.ReponseB;
+  ReponseC=autre.ReponseC;
+  ReponseD=autre.ReponseD;
+  BonneReponse=autre.BonneReponse;
+  return (*this);
 }

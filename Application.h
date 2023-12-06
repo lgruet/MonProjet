@@ -1,6 +1,5 @@
 #include <random> 
 #include "Question.h"
-#include "Actionneur.h"
 #include "Bouton.h"
 
 using namespace std;
