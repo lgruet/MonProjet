@@ -1,71 +1,50 @@
-#include <iostream>
 #include "Ecran.h"
 
+Ecran::Ecran(){
+  NULL;
+}
+
 void Ecran::DebutJeu(){
-    cout<<"*********************************************************************"<<endl;
-    cout<<"Bienvenue au début du jeu :)"<<endl;
-    cout<<"*********************************************************************"<<endl;
+    Serial.println("*********************************************************************");
+    Serial.println("Bienvenue au début du jeu :)");
+    Serial.println("*********************************************************************");
 }
 
 void Ecran::AfficheQst(Question Qst){
-    //cout<<Qst.getQst()<<endl;
-    //cout<<"A. "<<Qst.getA();
-    //cout<<"      "<<"B. "<<Qst.getB()<<endl;
-    //cout<<"C. "<<Qst.getC();
-    //cout<<"      "<<"D. "<<Qst.getD()<<endl;
+    Serial.println(Qst.getQst());
+    Serial.print("A. ");
+    Serial.print(Qst.getA());
+    Serial.print("      ");
+    Serial.print("B. ");
+    Serial.println(Qst.getB());
+    Serial.print("C. ");
+    Serial.print(Qst.getC());
+    Serial.print("      ");
+    Serial.print("D. ");
+    Serial.println(Qst.getD());
 }
 
 void Ecran::AfficheScore(int score){
-    cout<<"Votre Score: "<<score<<"/5"<<endl;
+    Serial.print("Votre Score: ");
+    Serial.print(score);
+    Serial.println("/5");
 }
 
 void Ecran::FinJeu(int score){
-    cout<<"*********************************************************************"<<endl;
-    cout<<"Fin"<<endl;
+    Serial.println("*********************************************************************");
+    Serial.println("Fin");
     AfficheScore(score);
     if (score<2){
-        cout<<"Les questions devaient être difficiles..."<<endl;
+        Serial.println("Les questions devaient être difficiles...");
     }
     else if(score==2){
-        cout<<"Presque la moyenne, peu mieux faire "<<endl;
+        Serial.println("Presque la moyenne, peu mieux faire ");
     }
-    else if(score>3&score<5){
-        cout<<"C'est pas mal "<<endl;
+    else if((score>3)&&(score<5)){
+        Serial.println("C'est pas mal ");
     }
     else if(score==5){
-        cout<<"Perfect, un petit génie"<<endl;
+        Serial.println("Perfect, un petit génie");
     }
-    cout<<"*********************************************************************"<<endl;
-}
-
-int main() {
-    bool quitter = false;
-
-    while (!quitter) {
-        std::cout << "1. Option 1\n";
-        std::cout << "2. Option 2\n";
-        std::cout << "3. Quitter\n";
-
-        std::cout << "Choisissez une option : ";
-        int choix;
-        std::cin >> choix;
-
-        switch (choix) {
-            case 1:
-                std::cout << "Vous avez choisi l'option 1.\n";
-                break;
-            case 2:
-                std::cout << "Vous avez choisi l'option 2.\n";
-                break;
-            case 3:
-                quitter = true;
-                break;
-            default:
-                std::cout << "Option invalide. Veuillez réessayer.\n";
-                break;
-        }
-    }
-    std::cout << "Au revoir !\n";
-    
-    return 0;
+    Serial.println("*********************************************************************");
 }

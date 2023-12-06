@@ -1,4 +1,4 @@
-#include <iostream>
+//#include <iostream> // N'existe pas dans Arduino, on utilise le terminal Arduino
 #include "Question.h"
 using namespace std;
 
