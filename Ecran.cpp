@@ -9,7 +9,7 @@ void Ecran::DebutJeu(){
 
 void Ecran::AfficheQst(Question Qst){
     //cout<<Qst.getQst()<<endl;
-    cout<<"A. "<<Qst.getA();
+    //cout<<"A. "<<Qst.getA();
     //cout<<"      "<<"B. "<<Qst.getB()<<endl;
     //cout<<"C. "<<Qst.getC();
     //cout<<"      "<<"D. "<<Qst.getD()<<endl;

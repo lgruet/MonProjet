@@ -13,31 +13,31 @@ Question::Question(string Q, string A, string B, string C, string D, int BonneRe
     this->BonneReponse=BonneReponse;
 }
 
-string getQst(){
+string Question::getQst(){
   return this->Qst;
 }
 
-string getA(){
+string Question::getA(){
   return this->ReponseA;
 }
 
-string getB(){
+string Question::getB(){
   return this->ReponseB;
 }
 
-string getC(){
+string Question::getC(){
   return this->ReponseC;
 }
 
-string getD(){
+string Question::getD(){
   return this->ReponseD;
 }
 
-int getBonneReponse(){
+int Question::getBonneReponse(){
   return this->BonneReponse;
 }
 
-Question & operator = (const Question & autre){
+Question& Question::operator = (const Question & autre){
     Qst=autre.Qst;
     ReponseA=autre.ReponseA;
     ReponseB=autre.ReponseB;
