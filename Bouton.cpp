@@ -6,10 +6,10 @@ Bouton::Bouton(){
   NULL;
 }
 
-Bouton::Bouton(uint8_t pin, char Mode, char Reponse):Actionneur(pin, Mode){
+Bouton::Bouton(uint8_t pin, char Mode, int Reponse):Actionneur(pin, Mode){
   this->boutonPin=pin;
   this->Reponse=Reponse;
-  this->Etat=HIGH;
+  //this->Etat=LOW;
 }
 
 void Bouton::ReadEtat(){
@@ -20,6 +20,6 @@ bool Bouton::getEtat(){
   return this->Etat;
 
 }
-char Bouton::getReponse(){
+int Bouton::getReponse(){
   return this->Reponse;
 }
