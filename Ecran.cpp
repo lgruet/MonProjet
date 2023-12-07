@@ -7,6 +7,7 @@ Ecran::Ecran(){
 void Ecran::DebutJeu(){
     Serial.println("*********************************************************************");
     Serial.println("Bienvenue au début du jeu :)");
+    Serial.println("Appuyez sur le bouton A pour commencer");
     Serial.println("*********************************************************************");
 }
 
@@ -38,7 +39,7 @@ void Ecran::FinJeu(int score){
         Serial.println("Les questions devaient être difficiles...");
     }
     else if(score==2){
-        Serial.println("Presque la moyenne, peu mieux faire ");
+        Serial.println("Presque la moyenne, peut mieux faire ");
     }
     else if((score>3)&&(score<5)){
         Serial.println("C'est pas mal ");
