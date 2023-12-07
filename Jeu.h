@@ -1,4 +1,5 @@
 #include <random> 
+#include <ctime>
 #include "Bouton.h"
 #include "Ecran.h"
 
@@ -6,9 +7,9 @@ using namespace std;
 
 class Jeu{
     private :
-    Question qst_tab[5];
+    Question qst_tab[15];
     int score;
-    bool ready; // Indique si le joueur est prêt à jouer
+    bool ready; // Indique si le bouton est appuyé
     Ecran E;
     Bouton BA, BB, BC, BD; 
 
@@ -35,10 +36,9 @@ class Jeu{
     bool getReady();
     void setReady(bool R);
 
+    /*surement inutile
     void Init_Jeu();
-
     void Fin_Jeu();
-
-
+    */
 
 };
