@@ -14,37 +14,19 @@ void Application::Init_Application(){
 
 //Fonction appelée dans le loop du .ino
 void Application::Run_Application(){
+  //affichage ecran d'accueil du jeu
   J.getEcran().DebutJeu();
-  /*Bouton B;
-  B=Bouton(D5, 'I', 1);
-  B.ReadEtat();
-  Serial.println(B.getEtat()); (tests)*/
   
-  /*J.getBA()->ReadEtat();
-  Serial.println(J.getBA()->getEtat()); (version new et pointeurs)*/
-  
+  //attente de l'appui du bouton A pour démarrer le jeu
   while(J.getBA().getEtat()==LOW){
-
     J.getBA().ReadEtat();
-    Serial.println("dans le while");
-    
-    /*J.getBA()->ReadEtat();
-    Serial.println("dans le while");((version new et pointeurs) ATTENTION changer condition en J.getBA()->ReadEtat()==LOW*/
-  
-    /*B.ReadEtat();
-    Serial.println(B.getEtat()); (tests)*/
-    /*J.getBA().ReadEtat();
-    Serial.println("dans le while");
-    delay(1000);(tests)*/
   }
-  Serial.println("en dehors");
+  
+  //code du jeu
 
+  //boucle infinie pour pas que le jeu redémarre tout seul : il redémarre avec le reset de la carte
   while(1){
     delay(1000);
   }
-
-   /* for (int i=0; i<5; i++){
-    //On affiche une question random et on attend la réponse du joueur 
-    }*/
 
 }
