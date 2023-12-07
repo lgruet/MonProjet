@@ -26,7 +26,7 @@ void Application::Run_Application(){
   while(J.getBA().getEtat()==LOW){
 
     J.getBA().ReadEtat();
-    Serial.println("dans le while")
+    Serial.println("dans le while");
     
     /*J.getBA()->ReadEtat();
     Serial.println("dans le while");((version new et pointeurs) ATTENTION changer condition en J.getBA()->ReadEtat()==LOW*/

@@ -18,7 +18,7 @@ class Jeu{
     //Constructeur
     Jeu();
 
-    ~Jeu();
+    //~Jeu(); (version new)
 
     //renvoie une question aléatoire
     Question Question_Random();

@@ -16,21 +16,26 @@ Jeu::Jeu(){
     this->ready=false;
 
     //création des boutons
-    BA= new Bouton(D5, 'I', 1);
+    /*BA= new Bouton(D5, 'I', 1);
     BB= new Bouton(D6, 'I', 2);
     BC= new Bouton(D8, 'I', 3);
-    BD= new Bouton(D7, 'I', 4);
+    BD= new Bouton(D7, 'I', 4); (version new)*/
+
+    BA= Bouton(D5, 'I', 1);
+    BB= Bouton(D6, 'I', 2);
+    BC= Bouton(D8, 'I', 3);
+    BD= Bouton(D7, 'I', 4); //(version pointeur et ref)
 
     E=Ecran();
 }
 
-Jeu::~Jeu(){
+/*Jeu::~Jeu(){
   delete(BA);
   delete(BB);
   delete(BC);
   delete(BD);
   Serial.println("destructeur");
-}
+} (version new)*/
 
 Question Jeu::Question_Random(){
     return qst_tab[rand() %sizeof(qst_tab)] ;
