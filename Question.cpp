@@ -46,3 +46,7 @@ Question& Question::operator = (const Question & autre){
   BonneReponse=autre.BonneReponse;
   return (*this);
 }
+
+bool Question::operator == (const Question & autre){
+  return ((Qst==autre.Qst)&&(ReponseA==autre.ReponseA)&&(ReponseB==autre.ReponseB)&&(ReponseC==autre.ReponseC)&&(ReponseD==autre.ReponseD)&&(BonneReponse==autre.BonneReponse));
+}

@@ -9,10 +9,10 @@ Application::Application(){
 void Application::Init_Application(){
   Serial.begin(9600);
   J=Jeu();
-
   // On fait rien donc je le commente
   //J.Init_Jeu();
 }
+
 
 //Fonction appelée dans le loop du .ino
 void Application::Run_Application(){
@@ -35,10 +35,9 @@ void Application::Run_Application(){
     //Permet de ne pas afficher plusieurs fois la même question
     while ((Q==q_precedent[0])||(Q==q_precedent[1])||(Q==q_precedent[2])||(Q==q_precedent[3])||Q==q_precedent[4]){
         Q=J.Question_Random();
-      }
+    }
     J.getEcran().AfficheQst(Q);
-    
-    //code du jeu
+    delay(1000);
 
     //On attend que le joueur appuie sur un bouton 
     while(J.getReady()==false){
@@ -67,6 +66,7 @@ void Application::Run_Application(){
     if (reponseDonnee==Q.getBonneReponse()){
       J.Increment_Score();
     }
+    J.setReady(false);
   }
 
   //on affiche la fin du jeu après les 5 questions posées

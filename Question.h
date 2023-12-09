@@ -26,4 +26,7 @@ class Question{
 
     //Redéfinition de l'opérateur =
     Question& operator = (const Question & autre);
+
+    //Redéfinition de l'opérateur ==
+    bool operator == (const Question & autre);
 };
