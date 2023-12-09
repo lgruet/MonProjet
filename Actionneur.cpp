@@ -1,6 +1,4 @@
-
 #include "Actionneur.h"
-
 using namespace std;
 
 Actionneur::Actionneur(){

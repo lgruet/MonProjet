@@ -38,6 +38,7 @@ void Ecran::FinJeu(int score){
   Serial.println("*********************************************************************");
   Serial.println("Fin");
   AfficheScore(score);
+  //Affiche un message différent suivant le score
   if (score<2){
     Serial.println("Les questions devaient être difficiles...");
   }

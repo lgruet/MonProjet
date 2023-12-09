@@ -1,5 +1,4 @@
 #include "Bouton.h"
-
 using namespace std;
 
 Bouton::Bouton(){
@@ -9,7 +8,6 @@ Bouton::Bouton(){
 Bouton::Bouton(uint8_t pin, char Mode, int Reponse):Actionneur(pin, Mode){
   this->boutonPin=pin;
   this->Reponse=Reponse;
-  //this->Etat=LOW;
 }
 
 void Bouton::ReadEtat(){

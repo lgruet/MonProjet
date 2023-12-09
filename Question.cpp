@@ -5,12 +5,12 @@ Question::Question(){
 }
 
 Question::Question(String Q, String A, String B, String C, String D, int BonneReponse){
-    this->Qst=Q;
-    this->ReponseA=A;
-    this->ReponseB=B;
-    this->ReponseC=C;
-    this->ReponseD=D;
-    this->BonneReponse=BonneReponse;
+  this->Qst=Q;
+  this->ReponseA=A;
+  this->ReponseB=B;
+  this->ReponseC=C;
+  this->ReponseD=D;
+  this->BonneReponse=BonneReponse;
 }
 
 String Question::getQst(){

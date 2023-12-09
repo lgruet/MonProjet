@@ -2,10 +2,10 @@
 using namespace std;
 
 class Actionneur{
-  private:
-
   public:
-    Actionneur();
-    Actionneur(uint8_t pin, char Mode);
+  //Constructeurs
+  Actionneur();
+  //Initialise l'actionneur sur une pin donnée dans un mode donné ('I' pour input/'O' pour output)
+  Actionneur(uint8_t pin, char Mode);
 
 };
