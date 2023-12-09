@@ -5,25 +5,15 @@ Ecran::Ecran(){
 }
 
 void Ecran::DebutJeu(){
-  //Clear le terminal (à vérifier)
-  delay(100);
-  // Envoyer des caractères de contrôle pour effacer le Serial Monitor
-  Serial.write("\033[H\033[2J");
-  delay(100);
-
+  Serial.println(" ");
   Serial.println("*********************************************************************");
   Serial.println("Bienvenue au début du jeu :)");
   Serial.println("Appuyez sur le bouton A pour commencer");
   Serial.println("*********************************************************************");
+  Serial.println(" ");
 }
 
 void Ecran::AfficheQst(Question Qst){
-  //Clear le terminal (à vérifier)
-  delay(100);
-  // Envoyer des caractères de contrôle pour effacer le Serial Monitor
-  Serial.write("\033[H\033[2J");
-  delay(100);
-
   Serial.println(Qst.getQst());
   Serial.print("A. ");
   Serial.print(Qst.getA());
@@ -35,6 +25,7 @@ void Ecran::AfficheQst(Question Qst){
   Serial.print("      ");
   Serial.print("D. ");
   Serial.println(Qst.getD());
+  Serial.println(" ");
 }
 
 void Ecran::AfficheScore(int score){
@@ -44,12 +35,6 @@ void Ecran::AfficheScore(int score){
 }
 
 void Ecran::FinJeu(int score){
-  //Clear le terminal (à vérifier)
-  delay(100);
-  // Envoyer des caractères de contrôle pour effacer le Serial Monitor
-  Serial.write("\033[H\033[2J");
-  delay(100);
-
   Serial.println("*********************************************************************");
   Serial.println("Fin");
   AfficheScore(score);

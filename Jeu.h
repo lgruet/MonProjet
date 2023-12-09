@@ -33,7 +33,7 @@ class Jeu{
     Bouton& getBC();
     Bouton& getBD(); 
 
-    bool getReady();
+    bool& getReady();
     void setReady(bool R);
 
     /*surement inutile

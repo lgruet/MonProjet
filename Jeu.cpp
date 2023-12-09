@@ -72,7 +72,7 @@ Bouton& Jeu::getBD(){
 }
 
 
-bool Jeu::getReady(){
+bool& Jeu::getReady(){
   return this->ready;
 }
 
