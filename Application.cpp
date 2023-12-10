@@ -7,6 +7,10 @@ Application::Application(){
 
 //Méthode appelée dans le setup du .ino
 void Application::Init_Application(){
+  //Disable le watchdog reset du software pour éviter que le programme reset seul 
+  wdt_disable();
+  //Disable le watchdog reset du hardware pour la même raison
+  *((volatile uint32_t*) 0x60000900) &= ~(1); 
   //Initialise le terminal (Serial Monitor) de l'Arduino avec un baud rate de 9600
   Serial.begin(9600);
   J=Jeu();
