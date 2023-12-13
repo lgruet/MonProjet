@@ -1,4 +1,4 @@
-BE Programmation Orientée Objet :
+﻿BE Programmation Orientée Objet :
 Projet "Question pour un Champion"
 
 Emma Couston
@@ -12,7 +12,6 @@ Diagramme de classe :
 
 	Après analyse de notre système, nous avons pu construire le diagramme de classe suivant :
 
------------ insérer diagramme ----------
 
 
 Schéma de fonctionnement :
