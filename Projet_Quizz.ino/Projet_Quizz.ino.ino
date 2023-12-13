@@ -1,12 +1,14 @@
 #include <Arduino.h>
 #include "Application.h"
 
+Application A;
+
 void setup() {
   // put your setup code here, to run once:
-  Init_Application();
+  A.Init_Application();
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Run_Application();
+  A.Run_Application();
 }
